@@ -1,0 +1,39 @@
+@import '../../../../assets/sass/_variables'
+
+.container
+	width: 100%
+
+	margin-bottom: 50px
+
+	display: flex
+	align-items: center
+
+	position: relative
+
+	.button
+		padding: 6px
+
+		left: 10px
+
+		display: flex
+		align-content: center
+		justify-content: center
+
+		position: absolute
+
+		border-radius: 10px
+
+		background-color: $pink
+		color: $background
+
+	input
+		padding: 15px 15px 15px 48px
+
+		border-radius: 15px
+		border: 2px solid rgba($font-color, .1)
+
+		transition: border-color .4s ease
+
+		&:hover,
+		&:focus
+			border-color: rgba($font-color, .5)

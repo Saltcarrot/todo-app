@@ -1,0 +1,75 @@
+@import '../../../assets/sass/_variables'
+
+// .todo_list
+// 	width: 100%
+
+.todo_item
+	width: 100%
+	height: auto
+
+	padding: 10px 15px
+
+	display: flex
+	align-items: center
+
+	word-wrap: break-word
+
+	border-radius: 15px
+
+	background-color: $todo
+
+	transition: background-color .4s ease
+
+	&:not(:first-of-type)
+		margin-top: 15px
+
+	&:hover
+		background-color: lighten($todo, 10%)
+
+	> .item_check_btn
+		background-color: lighten($background, 10%)
+		color: #fff
+
+	.check_btn
+		width: 25px
+		height: 25px
+
+		margin-right: 15px
+
+		flex-shrink: 0
+
+		display: flex
+		align-items: center
+		justify-content: center
+
+		border-radius: 10px
+		border: 2px solid $pink
+
+		background-color: $background
+
+		transition: background-color .4s ease, color .4s ease
+
+		> svg
+			width: 13px
+			height: 13px
+
+	&.completed
+		text-decoration: line-through
+
+		opacity: .4
+
+		.check_btn
+			background-color: $pink
+			color: $background
+
+	.delete_btn
+		margin-left: auto
+		color: rgba($red, .2)
+
+		transition: color .4s ease
+
+		&:hover
+			color: $red
+
+		> svg
+			font-size: 20px
